@@ -36,7 +36,7 @@ public class Inventory : MonoBehaviour
             rt.anchoredPosition = new Vector2(x, -y);
 
             // 활성화 되어 있는 경우만, bag의 위치, 크기에 영향을 준다.
-            if (itemSlots[i].isActiveAndEnabled)
+            if (itemSlots[i].isActiveAndEnabled && itemSlots[i].state == Slot.State.Available)
             {
                 min.x = Mathf.Min(min.x, x);
                 min.y = Mathf.Min(min.y, y);
